@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asaan News - Asaan Credit Limited</title>
+    <meta name="description"
+        content="Stay updated with the latest financial insights, success stories, and company news from Asaan Credit Limited.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="header header-subpage" id="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Asaan Credit" class="logo-img">
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link">Entrepreneur & Investor</a></li>
+                <li class="nav-item"><a href="news.html" class="nav-link active">News</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="contact.php" class="btn btn-nav">Login</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container fade-up">
+            <h1>Asaan News</h1>
+            <p>Latest updates, success stories, and financial insights for a better future.</p>
+        </div>
+    </section>
+
+    <!-- News Content -->
+    <section class="news-section">
+        <div class="container">
+            
+            <!-- 2. Featured News Section -->
+            <div class="featured-news fade-up">
+                <div class="featured-news-img" style="background-image: url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80')"></div>
+                <div class="featured-news-content">
+                    <span class="text-red fw-bold text-uppercase mb-2" style="letter-spacing: 2px;">Latest Headline</span>
+                    <h2>Asaan Credit Expands to Five New Districts</h2>
+                    <p class="mt-3 opacity-75">We are taking a giant leap toward financial inclusion in Nepal by establishing new operational hubs in some of the most remote regions, ensuring every entrepreneur has a chance to grow.</p>
+                    <div class="mt-4">
+                        <button class="btn btn-primary" onclick="openNewsModal(1)">Read Full Story</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 & 5. Filters and Search -->
+            <div class="project-controls fade-up">
+                <div class="category-filters">
+                    <div class="category-pill active" data-category="all">All News</div>
+                    <div class="category-pill" data-category="News">Company News</div>
+                    <div class="category-pill" data-category="Success Story">Success Stories</div>
+                    <div class="category-pill" data-category="Investment Tips">Investment Tips</div>
+                    <div class="category-pill" data-category="Announcements">Announcements</div>
+                </div>
+                <div class="search-container" style="margin-bottom: 0; min-width: 300px;">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="newsSearch" class="search-input" placeholder="Search articles...">
+                </div>
+            </div>
+
+            <div class="news-grid-container">
+                <!-- 3. News Listing Section -->
+                <div id="newsGrid" class="news-grid">
+                    <!-- Data loaded by JS -->
+                </div>
+
+                <!-- 7. Sidebar -->
+                <aside class="news-sidebar fade-up">
+                    <div class="sidebar-widget">
+                        <h5>Recent Insights</h5>
+                        <div id="recentNewsSidebar">
+                            <!-- Data loaded by JS -->
+                        </div>
+                    </div>
+                    <div class="sidebar-widget">
+                        <h5>Join Our Newsletter</h5>
+                        <p class="small text-muted mb-3">Get the latest financial tips delivered to your inbox.</p>
+                        <form style="display: flex; gap: 0.5rem;">
+                            <input type="email" placeholder="Your email" class="filter-select" style="flex-grow: 1; border-radius: 4px; padding: 0.5rem;">
+                            <button type="button" class="btn btn-primary btn-sm"><i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- 8. Load More Component -->
+            <div class="load-more-container text-center mt-5 fade-up">
+                <button id="btnLoadMoreNews" class="btn btn-outline-primary">Load More Stories <i class="fa-solid fa-chevron-down ms-2"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Blog Detail Modal -->
+    <div id="newsModal" class="modal">
+        <div class="modal-content" style="max-width: 900px;">
+            <!-- Populated by JS -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-about">
+                <a href="index.html" class="logo footer-logo">
+                    <img src="images/logo.png" alt="" class="logo-img" style="filter: brightness(0) invert(1);">
+                </a>
+                <p>We are more than a platform — we are your trusted financial partner in growth and success.
+At Asaan Credit, we connect entrepreneurs with reliable investors and help transform ideas into real businesses.
+
+We focus on trust, transparency, and long-term financial relationships that support sustainable growth for both investors and entrepreneurs.
+                </p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="news.html">Asaan News</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="investment.html">Investment Plans</a></li>
+                    <li><a href="contact.php">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <li><a href="#">Risk Disclosure</a></li>
+                     <li><a href="#">Investing</a></li>
+                    <li><a href="#">Fonding</a></li>
+                    <li><a href="#">Weroding</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; 2026 Asaan Credit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
